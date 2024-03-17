@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nuxt-deployment
+  labels:
+    app: nuxt-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nuxt-app
+  template:
+    metadata:
+      labels:
+        app: nuxt-app
+    spec:
+      containers:
+        - name: nuxt-app
+          image: ghcr.io/ta8i2chi8/sample-app-for-cicd:latest
+          ports:
+            - containerPort: 3000

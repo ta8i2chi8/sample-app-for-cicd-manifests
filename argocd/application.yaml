@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app-for-cicd
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: sample-app-for-cicd
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/ta8i2chi8/sample-app-for-cicd-manifests
+    targetRevision: main
+    path: app
+  syncPolicy:
+    automated:
+      prune: true

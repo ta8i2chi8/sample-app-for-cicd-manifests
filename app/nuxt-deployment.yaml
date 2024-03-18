@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: nuxt-app
-          image: ghcr.io/ta8i2chi8/sample-app-for-cicd:latest
+          image: ghcr.io/ta8i2chi8/sample-app-for-cicd:3c81ba4
           ports:
             - containerPort: 3000

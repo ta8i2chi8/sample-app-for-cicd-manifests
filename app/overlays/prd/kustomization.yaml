@@ -6,4 +6,4 @@ patchesStrategicMerge:
 - nuxt-deployment-patch.yaml
 images:
 - name: ghcr.io/ta8i2chi8/sample-app-for-cicd
-  newTag: "7349e64"
+  newTag: 9fb44ab

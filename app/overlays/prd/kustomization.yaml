@@ -4,4 +4,9 @@ resources:
   - ../../base
 
 patchesStrategicMerge:
-  - .argocd-source-sample-app-for-cicd.yaml
+  - nuxt-deployment-patch.yaml
+
+images:
+  - name: nuxt-app-image
+    newName: ghcr.io/ta8i2chi8/sample-app-for-cicd
+    newTag: c63f4e1

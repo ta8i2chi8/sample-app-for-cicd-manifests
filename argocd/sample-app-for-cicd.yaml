@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
     argocd-image-updater.argoproj.io/git-branch: main:image-updater-{{.SHA256}}
     argocd-image-updater.argoproj.io/image-list: my-image=ghcr.io/ta8i2chi8/sample-app-for-cicd
     argocd-image-updater.argoproj.io/my-image.update-strategy: latest

@@ -6,7 +6,6 @@ metadata:
   labels:
     app: nuxt-app
 spec:
-  # replicas: 2
   selector:
     matchLabels:
       app: nuxt-app
@@ -14,9 +13,9 @@ spec:
     metadata:
       labels:
         app: nuxt-app
-    # spec:
-    #   containers:
-    #     - name: nuxt-app
-    #       image: ghcr.io/ta8i2chi8/sample-app-for-cicd:3c81ba4
-    #       ports:
-    #         - containerPort: 3000
+    spec:
+      containers:
+        - name: nuxt-app
+          image: nuxt-app-image
+          ports:
+            - containerPort: 3000

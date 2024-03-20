@@ -11,13 +11,15 @@ metadata:
     argocd-image-updater.argoproj.io/my-image.ignore-tags: latest
 spec:
   project: default
+
+  source:
+    repoURL: git@github.com:ta8i2chi8/sample-app-for-cicd-manifests.git
+    targetRevision: main
+    path: app/overlays/prd
   destination:
     namespace: sample-app-for-cicd
     server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/ta8i2chi8/sample-app-for-cicd-manifests
-    targetRevision: main
-    path: app/overlays/prd
+
   syncPolicy:
     automated:
       prune: true

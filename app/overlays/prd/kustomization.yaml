@@ -1,11 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:  
-  - ../../base
-
+resources:
+- ../../base
 patchesStrategicMerge:
-  - nuxt-deployment-patch.yaml
-
+- nuxt-deployment-patch.yaml
 images:
-  - name: ghcr.io/ta8i2chi8/sample-app-for-cicd
-    newTag: c63f4e1
+- name: ghcr.io/ta8i2chi8/sample-app-for-cicd
+  newTag: "7349e64"

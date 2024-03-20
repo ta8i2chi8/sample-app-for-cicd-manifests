@@ -17,7 +17,7 @@ spec:
   source:
     repoURL: https://github.com/ta8i2chi8/sample-app-for-cicd-manifests
     targetRevision: main
-    path: app
+    path: app/overlays/prd
   syncPolicy:
     automated:
       prune: true

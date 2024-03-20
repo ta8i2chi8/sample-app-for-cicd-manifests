@@ -13,7 +13,7 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:ta8i2chi8/sample-app-for-cicd-manifests.git
+    repoURL: https://github.com/ta8i2chi8/sample-app-for-cicd-manifests.git
     targetRevision: main
     path: app/overlays/prd
   destination:
